@@ -77,7 +77,8 @@ javac .java
 java ShapeDrawer # 运行图形变换工具
 java BresenhamLine # 运行直线绘制工具
 `````````
-
+## 运行exe文件
+- 可以点击对应的exe文件实现快速部署和运行
 ## 注意事项
 - 所有程序都提供了图形化界面，操作直观
 - 建议使用鼠标进行操作
