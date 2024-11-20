@@ -108,9 +108,9 @@ class DrawPanel extends JPanel {
     }
     
     private void plotEllipsePoints(Graphics g, int centerX, int centerY, int x, int y) {
-        g.drawLine(centerX + x, centerY + y, centerX + x, centerY + y);
-        g.drawLine(centerX - x, centerY + y, centerX - x, centerY + y);
-        g.drawLine(centerX + x, centerY - y, centerX + x, centerY - y);
-        g.drawLine(centerX - x, centerY - y, centerX - x, centerY - y);
+        g.fillRect(centerX + x, centerY + y, 1, 1);
+        g.fillRect(centerX - x, centerY + y, 1, 1);
+        g.fillRect(centerX + x, centerY - y, 1, 1);
+        g.fillRect(centerX - x, centerY - y, 1, 1);
     }
 } 

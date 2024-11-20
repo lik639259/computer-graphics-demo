@@ -38,7 +38,7 @@ public class BresenhamLine extends JPanel {
         int err = dx + dy, e2;
 
         while (true) {
-            g.drawLine(x0, y0, x0, y0);
+            g.fillRect(x0, y0, 1, 1);
             if (x0 == x1 && y0 == y1) break;
             e2 = 2 * err;
             if (e2 >= dy) {

@@ -53,15 +53,14 @@ public class BresenhamCircle extends JPanel {
         int d = 3 - 2 * r;
 
         while (y >= x) {
-            // 8个对称点
-            g.drawLine(x0 + x, y0 + y, x0 + x, y0 + y);
-            g.drawLine(x0 - x, y0 + y, x0 - x, y0 + y);
-            g.drawLine(x0 + x, y0 - y, x0 + x, y0 - y);
-            g.drawLine(x0 - x, y0 - y, x0 - x, y0 - y);
-            g.drawLine(x0 + y, y0 + x, x0 + y, y0 + x);
-            g.drawLine(x0 - y, y0 + x, x0 - y, y0 + x);
-            g.drawLine(x0 + y, y0 - x, x0 + y, y0 - x);
-            g.drawLine(x0 - y, y0 - x, x0 - y, y0 - x);
+            g.fillRect(x0 + x, y0 + y, 1, 1);  // 第一象限右上
+            g.fillRect(x0 - x, y0 + y, 1, 1);  // 第二象限左上
+            g.fillRect(x0 + x, y0 - y, 1, 1);  // 第四象限右下
+            g.fillRect(x0 - x, y0 - y, 1, 1);  // 第三象限左下
+            g.fillRect(x0 + y, y0 + x, 1, 1);  // 第一象限上右
+            g.fillRect(x0 - y, y0 + x, 1, 1);  // 第二象限上左
+            g.fillRect(x0 + y, y0 - x, 1, 1);  // 第四象限下右
+            g.fillRect(x0 - y, y0 - x, 1, 1);  // 第三象限下左
 
             if (d < 0) {
                 d += 4 * x + 6;
